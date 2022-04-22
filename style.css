@@ -1,4 +1,232 @@
-*{
+/* Importar una fuente personalizada: Montserrat Alternates */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+
+@keyframes bgrandom { /* linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121)); */
+    0% { background: linear-gradient(to right, #6dd5ed 5%, #2193b0 95%); }
+    34% { background: linear-gradient(to right, #f953c6 5%, #b91d73 95%); }
+
+    35% { background: linear-gradient(to right,  #fdc830 5%, #f37335 95%); }
+    67% { background: linear-gradient(to right, #99f2c8  5%, #1f4037 95%); }
+
+    68% { background: linear-gradient(to right, #bdc3c7 5%, #2c3e50 95%); }
+    100% { background: linear-gradient(to right, #06beb6 5%, #48b1bf 95%); }
+    }
+
+/* Anular todos los estilos */
+* {
+    /* Establecer valores a 0 */
     margin: 0;
     padding: 0;
+
+    /* Incluir el valor del border y padding dentro del control */
+    box-sizing: border-box;
+}
+
+/* Fuente para los menú */
+li,
+a {
+    /* Establecer el estilo de fuente */
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+
+    /* Eliminar características de los elementos */
+    text-decoration: none;
+}
+
+/* Modelo de alineación: FlexBox */
+header.menu {
+    /* Forma de representación de los elementos del menú */
+    display: flex;
+
+    /* Ubicar los elementos: X = Izquierda */
+    justify-content: left;
+
+    /* Centrar los elementos: Y = Centro */
+    align-items: center;
+
+    overflow: hidden;
+
+    /* Márgenes */
+    margin: 20px;
+
+    /* Relleno */
+    padding: 20px;
+
+    /* Medida: Alto */
+    height: 75px;
+
+    /* Fondo */
+    background: #ffbeff;
+
+    /* Sombra */
+    box-shadow: 0 0 5px gray;
+
+    /* Borde redondeado */
+    border-radius: 5px;
+
+    animation: 25.0s bgrandom infinite;
+}
+
+/* Estilos al Logo: Normal */
+header>svg.logo,
+/* Borde de la línea */
+header>svg.logo>.index-icono>path,
+/* Icono del logo */
+header>svg.logo>.index-icono>.index-texto>path {
+    /* Texto del logo */
+
+    /* Cursor: Manito */
+    cursor: pointer;
+
+    /* Tamaño */
+    width: 150px;
+
+    /* Margen derecho */
+    margin-right: 20px;
+
+    /* Bordes redondeados */
+    border-radius: 5px;
+
+    /* Color del borde */
+    border: solid 2px rgba(58, 31, 193, 0.95);
+
+    /* Relleno */
+    padding: 5px;
+
+    /* Color de la línea */
+    stroke: rgba(58, 31, 193, 0.95);
+
+    /* Grosor de la línea */
+    stroke-width: 3;
+}
+
+/* Estilos al Logo: MouseOver */
+header>svg.logo:hover,
+/* Borde de la línea */
+header>svg.logo:hover>.index-icono>path,
+/* Icono del logo */
+header>svg.logo:hover>.index-icono>.index-texto>path {
+    /* Texto del logo */
+    /* Fondo del logo */
+    background-color: goldenrod;
+
+    /* Quitar el borde del logo */
+    border: none;
+
+    /* Personalización de las líneas */
+    stroke: rgba(0, 0, 0, 1);
+    /* Color */
+    stroke-width: 3;
+    /* Ancho */
+    stroke-opacity: 1;
+    /* Opacidad */
+}
+
+/* Elementos del menú */
+.nav__elements {
+    /* Eliminar las viñetas */
+    list-style: none;
+}
+
+/* Menú */
+.nav__elements li {
+    /* Ubicar cada menú junto al otro */
+    display: inline-block;
+
+    /* Relleno */
+    padding: 20px;
+
+}
+
+/* Efectos de cada Menú */
+.nav__elements li a {
+    /* Agregar un borde con esquinas redondeadas */
+    border-radius: 4px;
+
+    /* Relleno */
+    padding: 20px;
+
+    /* Transiciones */
+    transition: all 0.3s ease 0s;
+
+    /* Color del Texto */
+    color: #fff;
+}
+
+/* Efectos de cada Menú: MouseHover */
+.nav__elements li a:hover {
+
+    /* Colores */
+    background-color: blue;
+    color: #fff;
+}
+
+/* Contenedor */
+main {
+    /* Margenes */
+    margin: 25px;
+}
+
+/* Subtítulo */
+main h2{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 2.3em;
+}
+
+/* Imágenes */
+img {
+    /* Ancho de la imagen */
+    width: 120px;
+
+    /* Convertirla en círculo */
+    border-radius: 50%;
+
+    /* Sombra */
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+    
+}
+
+/* Contenedor de la cita */
+section>figure {
+    height: 150px;
+    padding: 1em;
+    margin: 1.5em auto;
+
+    border: 1px solid #1f4037;
+    border-radius: 5px;
+}
+
+/* Cita */
+#cita__1 blockquote>p {
+    width: 80%;
+    float: left;
+}
+
+/* Imagen */
+#cita__1 blockquote>img {
+    float: right;
+}
+
+/* Autor de la cita */
+#cita__1 figcaption {
+    text-align: center;
+    clear: left;
+}
+
+/* Cita */
+#cita__2 blockquote>p {
+    width: 80%;
+    float: right;
+}
+
+/* Imagen */
+#cita__2 blockquote>img {
+    float: left;
+}
+
+/* Autor de la cita */
+#cita__2 figcaption {
+    text-align: center;
+    clear: right;
 }
